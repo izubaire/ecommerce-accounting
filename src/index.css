@@ -172,6 +172,9 @@ body {
   background-color: rgba(59, 130, 246, 1);
 }
 
+.max-characters {
+  max-width: 20ch; /* Set the minimum width based on the character count */
+}
 @media (min-width: 991px) {
   html {
     font-size: 55%;
@@ -183,3 +186,4 @@ body {
     font-size: 62.5%;
   }
 }
+
