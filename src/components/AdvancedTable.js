@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AdvancedTable = ({ data, itemsPerPage, setData }) => {
+const AdvancedTable = ({ data, itemsPerPage, setData, handleSubmit }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(data?.length / itemsPerPage);
 
@@ -71,9 +71,9 @@ const AdvancedTable = ({ data, itemsPerPage, setData }) => {
       {/* Pagination controls */}
       <div className="flex justify-between items-center text-2xl mb-5">
         <div className="mt-4">
-          {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleSubmit} >
             Submit
-          </button> */}
+          </button>
         </div>
         <div className="flex justify-end items-center mt-4">
           <button

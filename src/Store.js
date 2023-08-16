@@ -1,17 +1,26 @@
-import { configureStore } from '@reduxjs/toolkit'
-import adminReducer from './slice'
+import { configureStore } from "@reduxjs/toolkit";
+import adminReducer from "./slice";
 
 const store = configureStore({
-    middleware: (getDefaultMiddleware) =>
+  middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-        serializableCheck: {
-            ignoredActions: ['admin/userDelete','admin/ascSort','admin/dscSort','admin/openBox','admin/userDetail','admin/setLoc','admin/setMenu'],
-        }
+      serializableCheck: {
+        ignoredActions: [
+          "admin/userDelete",
+          "admin/ascSort",
+          "admin/dscSort",
+          "admin/openBox",
+          "admin/userDetail",
+          "admin/setLoc",
+          "admin/setMenu",
+          "admin/setAddRecordPopup",
+        ],
+      },
     }),
 
-    reducer:{
-        users: adminReducer
-    }
-})
+  reducer: {
+    users: adminReducer,
+  },
+});
 
-export default store
+export default store;
